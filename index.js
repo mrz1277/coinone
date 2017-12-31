@@ -92,6 +92,11 @@ class CoinOne {
       .post(this.v + '/order/' + 'limit_orders');
   }
 
+  orderInfo() {
+    return this._request
+      .post(this.v + '/order/' + 'order_info');
+  }
+
   //>> TRANSACTION Endpoints
   auth(type) {
     let params = {'type': 'btc or krw'}
