@@ -82,19 +82,19 @@ class CoinOne {
       .post(this.v + '/order/' + 'market_sell', params);
   }
 
-  filledOrders() {
+  filledOrders(params) {
     return this._request
-      .post(this.v + '/order/' + 'complete_orders');
+      .post(this.v + '/order/' + 'complete_orders', params);
   }
 
-  unfilledOrders() {
+  unfilledOrders(params) {
     return this._request
-      .post(this.v + '/order/' + 'limit_orders');
+      .post(this.v + '/order/' + 'limit_orders', params);
   }
 
-  orderInfo() {
+  orderInfo(params) {
     return this._request
-      .post(this.v + '/order/' + 'order_info');
+      .post(this.v + '/order/' + 'order_info', params);
   }
 
   //>> TRANSACTION Endpoints
